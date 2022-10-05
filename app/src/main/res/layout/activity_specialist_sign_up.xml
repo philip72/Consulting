@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".specialistSignUp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/createAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/register"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/specialistregsignIn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="end"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/specilaistfirstNameTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/specialistFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/specialistLastNameTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/SpecialistLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/specialistEmailTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/specialistRegEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/specialistphoneNoTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/specialistPhoneNo"
+                    android:layout_width="match_parent"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/phone_number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/idNoTextInputLayout"-->
+            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="15dp">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/idNo"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/poppins_light"-->
+            <!--                android:hint="@string/id_number"-->
+            <!--                android:inputType="phone"-->
+            <!--                android:textColorHint="#757575" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/specialistpasswordTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="16"
+                app:passwordToggleEnabled="true"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/specialistPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Enter Your Password"
+                    android:imeOptions="actionDone"
+                    android:maxLength="16"
+                    android:inputType="textPassword"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hospitalIdTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/HospitalId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Hospital ID"
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/professionPractisedTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ProfessionPractisec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Profession Practised"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/yearsOfExpTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/YearsOfExp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Years of Experience"
+                    android:inputType="number"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/AgeTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Age"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Age" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/idNoTextInputLayout"-->
+            <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="15dp">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/idNo"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/poppins_light"-->
+            <!--                android:hint="@string/id_number"-->
+            <!--                android:inputType="phone"-->
+            <!--                android:textColorHint="#757575" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hospitalPractisingTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="required"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hospitalPractising"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="hospital practising"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!---->
+
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:orientation="horizontal">-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/account"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:textSize="12sp"-->
+            <!--                android:fontFamily="@font/poppins_regular"-->
+            <!--                android:text="@string/condition"-->
+            <!--                android:textColor="@color/black" />-->
+
+            <!--        </LinearLayout>-->
+
+            <Button
+                android:id="@+id/SpecialistRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/continuee"
+                android:fontFamily="@font/poppin_bold"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
