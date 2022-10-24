@@ -99,6 +99,8 @@ class patientRegister : AppCompatActivity() {
             && !TextUtils.isEmpty(patientEmai)&& !TextUtils.isEmpty(patientPasswor)
             && !TextUtils.isEmpty(patientPhoneN)){
 
+
+
         }else if(patientEmai.let { Patterns.EMAIL_ADDRESS.matcher(it).matches()  }) {
             Toast.makeText(this, "invalid email", Toast.LENGTH_SHORT).show()
         }
@@ -107,37 +109,23 @@ class patientRegister : AppCompatActivity() {
         }
 
 
+        if (patientEmai!!.isEmpty()&& patientLastNam!!.isEmpty()&&patientEmai!!.isEmpty()&&
+                patientPhoneN!!.isEmpty()&&patientPasswor!!.isEmpty()){
+            Toast.makeText(this, "some fields  are empty  fill all details", Toast.LENGTH_SHORT).show()
 
-//        if (patientFirstNam!!.isEmpty()&& patientLastNam!!.isEmpty()) {
-//            Toast.makeText(this, "firstName and lastname are empty ", Toast.LENGTH_SHORT).show()
-//        }else if (patientEmai!!.isEmpty()){
-//            Toast.makeText(this, "email is empty  ", Toast.LENGTH_SHORT).show()
-//
-//
-//        }else if (!patientEmai?.let { Patterns.EMAIL_ADDRESS.matcher(it).matches() }!!){
-//            Toast.makeText(this, "invalid email", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPasswor!!.length<8){
-//            Toast.makeText(this, "Minimum of 8 characters ", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPasswor!!.matches(".*[A-Z].*".toRegex())){
-//            Toast.makeText(this, "password should contain upper case ", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPasswor!!.matches(".*[a-z].*".toRegex())) {
-//            Toast.makeText(this, "must contain lower case  ", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPasswor!!.matches(".*[@#\$%^&+=].*".toRegex())){
-//            Toast.makeText(this, "must have special characters  ", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPasswor!!.isEmpty()){
-//            Toast.makeText(this, "fpassword is empty ", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPhoneN!!.length!=10){
-//            Toast.makeText(this, "phone is less than 10 numbers", Toast.LENGTH_SHORT).show()
-//
-//        }else if (patientPhoneN!!.isEmpty()){
-//            Toast.makeText(this, "phoneNo is empty  ", Toast.LENGTH_SHORT).show()
-//        }
+        }else if (patientEmai?.let { Patterns.EMAIL_ADDRESS.matcher(it).matches() }!!){
+            Toast.makeText(this, "invalid email", Toast.LENGTH_SHORT).show()
+        }else if (patientPasswor!!.length<8){
+            Toast.makeText(this, "Minimum of 8 characters ", Toast.LENGTH_SHORT).show()
+        }else if (patientPasswor!!.matches(".*[A-Z].*".toRegex())) {
+            Toast.makeText(this, "password should contain upper case ", Toast.LENGTH_SHORT).show()
+        }else if (patientPasswor!!.matches(".*[a-z].*".toRegex())) {
+            Toast.makeText(this, "must contain lower case  ", Toast.LENGTH_SHORT).show()
+
+        }else if (patientPasswor!!.matches(".*[@#\$%^&+=].*".toRegex())){
+            Toast.makeText(this, "must have special characters  ", Toast.LENGTH_SHORT).show()
+
+        }
         mAuth!!
             .createUserWithEmailAndPassword(patientEmai!!,patientPasswor!!)
             .addOnCompleteListener(this){ task->

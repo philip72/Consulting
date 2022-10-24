@@ -12,6 +12,7 @@ class choosingButtons : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choosing_buttons)
 
+
         val patientSignIn = findViewById<Button>(R.id.PatientButton)
         patientSignIn.setOnClickListener {
             val intent = Intent(this,patientLogin::class.java)

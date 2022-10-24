@@ -6,13 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
+    android:background="#9D13E8"
     android:layout_margin="16dp">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginVertical="6dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -48,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="profession practised : "
+                android:text="Profession practised : "
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold"/>
@@ -64,31 +66,31 @@
 
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="hospital practised : "
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                android:textStyle="bold"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="hospital practised : "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="26sp"-->
+<!--                android:textStyle="bold"/>-->
 
-            <TextView
-                android:id="@+id/hospitalPractisin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="knh"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/hospitalPractisin"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="nai"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20sp"/>-->
 
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
 <!--        <LinearLayout-->
 <!--            android:layout_width="wrap_content"-->
@@ -123,7 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="years of exp: "
+                android:text="Years of exp: "
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold"/>
@@ -164,7 +166,28 @@
                 android:textSize="20sp"/>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/specRateView"
+                android:text="4.5"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
 
+        </LinearLayout>
 
     </LinearLayout>
 
